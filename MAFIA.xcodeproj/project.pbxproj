@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -55,6 +55,9 @@
 		966546872010F9FA008D0A8B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966546862010F9FA008D0A8B /* BaseView.swift */; };
 		96775C882011403A0092658D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96775C872011403A0092658D /* Player.swift */; };
 		967882952D4E6864008D7C97 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967882942D4E6864008D7C97 /* SecondaryButtonStyle.swift */; };
+		967882A02D4E810C008D7C97 /* AssetsCodegen in Frameworks */ = {isa = PBXBuildFile; productRef = 9678829F2D4E810C008D7C97 /* AssetsCodegen */; };
+		967882A32D4E81B5008D7C97 /* AssetsCodegen in Frameworks */ = {isa = PBXBuildFile; productRef = 967882A22D4E81B5008D7C97 /* AssetsCodegen */; };
+		967882A62D4E89E6008D7C97 /* AssetsCodegen in Frameworks */ = {isa = PBXBuildFile; productRef = 967882A52D4E89E6008D7C97 /* AssetsCodegen */; };
 		967A77052D25E80600C7C2F4 /* MafiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A77042D25E80600C7C2F4 /* MafiaApp.swift */; };
 		967A770A2D25ED7000C7C2F4 /* GameBoardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967A77092D25ED7000C7C2F4 /* GameBoardScreen.swift */; };
 		967F417020098EEB006D04CB /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967F416F20098EEB006D04CB /* ArrayExtension.swift */; };
@@ -171,6 +174,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967882A02D4E810C008D7C97 /* AssetsCodegen in Frameworks */,
+				967882A32D4E81B5008D7C97 /* AssetsCodegen in Frameworks */,
+				967882A62D4E89E6008D7C97 /* AssetsCodegen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +302,7 @@
 				96591C651FE85B660067BB2E /* MAFIA */,
 				96591C7D1FE85B660067BB2E /* MAFIATests */,
 				96591C881FE85B660067BB2E /* MAFIAUITests */,
+				9678829C2D4E7FD6008D7C97 /* Frameworks */,
 				96591C641FE85B660067BB2E /* Products */,
 			);
 			indentWidth = 4;
@@ -392,6 +399,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		9678829C2D4E7FD6008D7C97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		967A77062D25ED2200C7C2F4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +497,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				967882A82D4E89F1008D7C97 /* PBXTargetDependency */,
 				967A77032D25E61600C7C2F4 /* PBXTargetDependency */,
 			);
 			name = MAFIA;
@@ -569,6 +584,7 @@
 			mainGroup = 96591C5A1FE85B660067BB2E;
 			packageReferences = (
 				967A77012D25E59500C7C2F4 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				967882A42D4E89E6008D7C97 /* XCLocalSwiftPackageReference "assets-generator" */,
 			);
 			productRefGroup = 96591C641FE85B660067BB2E /* Products */;
 			projectDirPath = "";
@@ -702,6 +718,10 @@
 			isa = PBXTargetDependency;
 			target = 96591C621FE85B660067BB2E /* MAFIA */;
 			targetProxy = 96591C861FE85B660067BB2E /* PBXContainerItemProxy */;
+		};
+		967882A82D4E89F1008D7C97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 967882A72D4E89F1008D7C97 /* assets-generator */;
 		};
 		967A77032D25E61600C7C2F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1015,6 +1035,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		967882992D4E7FBD008D7C97 /* XCLocalSwiftPackageReference "assets-generator" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "assets-generator";
+		};
+		967882A42D4E89E6008D7C97 /* XCLocalSwiftPackageReference "assets-generator" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "assets-generator";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		967A77012D25E59500C7C2F4 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1027,6 +1058,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9678829F2D4E810C008D7C97 /* AssetsCodegen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 967882992D4E7FBD008D7C97 /* XCLocalSwiftPackageReference "assets-generator" */;
+			productName = AssetsCodegen;
+		};
+		967882A22D4E81B5008D7C97 /* AssetsCodegen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AssetsCodegen;
+		};
+		967882A52D4E89E6008D7C97 /* AssetsCodegen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AssetsCodegen;
+		};
+		967882A72D4E89F1008D7C97 /* assets-generator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 967882A42D4E89E6008D7C97 /* XCLocalSwiftPackageReference "assets-generator" */;
+			productName = "plugin:assets-generator";
+		};
 		967A77022D25E61600C7C2F4 /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 967A77012D25E59500C7C2F4 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
